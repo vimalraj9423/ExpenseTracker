@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
-import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import ExpenseForm from "./ExpenseForm";
 
 interface Props {
@@ -93,7 +93,7 @@ function ExpenseTracker(props: Props) {
           addAmount={addAmount}
           removeAmount={removeAmount}
         />
-        {transactions.length != 0 && (
+        {transactions.length !== 0 && (
           <Row className="justify-content-md-center">
             <Col md={6}>
               <Card>

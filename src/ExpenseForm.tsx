@@ -1,10 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import {  Row, Col, Card, Form, Button } from "react-bootstrap";
+import { Row, Col, Card, Form, Button } from "react-bootstrap"; 
 
-interface Props {
-  balance: Number;
-}
 interface ExpenseProps {
   validated: any;
   handleSubmit: React.FormEventHandler;
@@ -58,4 +55,13 @@ function ExpenseForm({
     </Row>
   );
 }
+ExpenseForm.propTypes = {
+  validated: PropTypes.bool,
+  handleSubmit: PropTypes.func,
+  currentbalance: PropTypes.number,
+  numberInput: PropTypes.func,
+  error: PropTypes.string,
+  addAmount: PropTypes.func,
+  removeAmount: PropTypes.func
+};
 export default ExpenseForm;
